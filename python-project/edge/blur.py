@@ -9,26 +9,31 @@ box_kernel = [[1 / 9, 1 / 9, 1 / 9],
               [1 / 9, 1 / 9, 1 / 9],
               [1 / 9, 1 / 9, 1 / 9]]
 
+# Gaussian kernel
 gaussian_kernel = [[1 / 256, 4  / 256,  6 / 256,  4 / 256, 1 / 256],
                    [4 / 256, 16 / 256, 24 / 256, 16 / 256, 4 / 256],
                    [6 / 256, 24 / 256, 36 / 256, 24 / 256, 6 / 256],
                    [4 / 256, 16 / 256, 24 / 256, 16 / 256, 4 / 256],
                    [1 / 256, 4  / 256,  6 / 256,  4 / 256, 1 / 256]]
 
+# Select kernel here:
 kernel = box_kernel
+
+# Middle of the kernel
+offset = len(kernel) // 2
 
 # Create output image
 outputImage = Image.new("RGB", inputImage.size)
 draw = ImageDraw.Draw(outputImage)
 
 # Compute convolution between intensity and kernels
-for x in range(1, inputImage.width - 1):
-    for y in range(1, inputImage.height - 1):
+for x in range(offset, inputImage.width - offset):
+    for y in range(offset, inputImage.height - offset):
         acc = [0, 0, 0]
         for a in range(len(kernel)):
             for b in range(len(kernel)):
-                xn = x + a - 1
-                yn = y + b - 1
+                xn = x + a - offset
+                yn = y + b - offset
                 pixel = inputPixels[xn, yn]
                 acc[0] += pixel[0] * kernel[a][b]
                 acc[1] += pixel[1] * kernel[a][b]
