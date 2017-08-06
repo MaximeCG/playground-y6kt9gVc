@@ -12,16 +12,32 @@ In this example, the value of the pixels is equal to the double of the pixel tha
 
 A simple blur can be done using this kernel: 
 
-$`\frac{1}{9}\begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}`$
-
 ```
-1/9 1/9 1/9
-1/9 1/9 1/9
-1/9 1/9 1/9
+| 1/9, 1/9, 1/9 |
+| 1/9, 1/9, 1/9 |
+| 1/9, 1/9, 1/9 |
 ```
 
-(called Box Blur)
+This is called the Box Blur. Each pixel is computed as the average of the surrounding pixels.
 
 ## Edge detection
+
+There are multiple ways to do edge detection. We will present the Sobel Operator here.
+
+The Sobel Operator uses two kernels (one for each direction):
+
+```
+     | -1,  0,  1 |
+Kx = | -2,  0,  2 |
+     | -1,  0,  1 |
+```
+
+```
+     | -1, -2, -1 |
+Ky = |  0,  0,  0 |
+     |  1,  2,  1 |
+```
+
+We compute the convolution between the image and the two kernels separately. That gives us, for each pixel, the values $`mag_x`$ and $`mag_y`$. The value of the current pixel is set at $`sqrt(mag_x^2 + mag_y^2)`$.
 
 @[Sobel operator]({"stubs": ["edge/sobel.py"], "command": "sh -c 'cp lena.png input.png && python3 edge/sobel.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
