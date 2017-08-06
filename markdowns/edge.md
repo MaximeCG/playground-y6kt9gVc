@@ -6,6 +6,22 @@ Let's take a 3x3 matrix as our kernel. For each pixel, the filter multiplies the
 
 ![Matrix convolution](convolution.png)
 
+In this example, the value of the pixels is equal to the double of the pixel that was located above it.
+
+# Blur
+
+A simple blur can be done using this kernel: 
+
+$`\frac{1}{9}\begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}`$
+
+```
+1/9 1/9 1/9
+1/9 1/9 1/9
+1/9 1/9 1/9
+```
+
+(called Box Blur)
+
 ## Edge detection
 
 @[Sobel operator]({"stubs": ["edge/sobel.py"], "command": "sh -c 'cp lena.png input.png && python3 edge/sobel.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
