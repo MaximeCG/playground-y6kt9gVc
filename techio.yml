@@ -1,9 +1,11 @@
-title : Python template
+title : Basic Image Manipulation
 
 # Table of content
 plan:
   - title: Introduction
     statement: markdowns/intro.md
+  - title: Filtering
+    statement: markdowns/edge.md
 
 # Settings for your programming projects and the associated Docker images
 projects:
