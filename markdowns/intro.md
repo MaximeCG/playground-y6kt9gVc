@@ -8,4 +8,4 @@ Table of Content:
 - Flip, Rotate and Resize
 - Colorize, Luminosity
 - Multiplication
-- Kernel filtering (edge detection, blur, ...)
+- [Kernel filtering (edge detection, blur, ...)](edge.md)

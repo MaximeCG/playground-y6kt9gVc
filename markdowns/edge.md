@@ -20,7 +20,18 @@ A simple blur can be done using this kernel:
 
 This is called the Box Blur. Each pixel is computed as the average of the surrounding pixels.
 
-@[Box Blur]({"stubs": ["edge/blur.py"], "command": "sh -c 'cp lena256.png input.png && python3 edge/blur.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
+And here is the kernel for the Gaussian Blur:
+
+```
+          | 1,  4,  6,  4, 1 |
+          | 4, 16, 24, 16, 4 |
+1 / 256 * | 6, 24, 36, 24, 6 |
+          | 4, 16, 24, 16, 4 |
+          | 1,  4,  6,  4, 1 |
+```
+As you can see, it's a weighten mean of the surrounding pixels that gives more weight to the pixel near the current pixel.
+
+@[Blur]({"stubs": ["edge/blur.py"], "command": "sh -c 'cp lena256.png input.png && python3 edge/blur.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
 
 # Edge detection
 
