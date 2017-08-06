@@ -20,6 +20,8 @@ A simple blur can be done using this kernel:
 
 This is called the Box Blur. Each pixel is computed as the average of the surrounding pixels.
 
+@[Box Blur]({"stubs": ["edge/blur.py"], "command": "sh -c 'cp lena256.png input.png && python3 edge/blur.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
+
 ## Edge detection
 
 There are multiple ways to do edge detection. We will present the Sobel Operator here.
@@ -38,6 +40,6 @@ Ky = |  0,  0,  0 |
      |  1,  2,  1 |
 ```
 
-We compute the convolution between the image and the two kernels separately. That gives us, for each pixel, the values $`mag_x`$ and $`mag_y`$. The value of the current pixel is set at $`sqrt(mag_x^2 + mag_y^2)`$.
+We compute the convolution between the image and the two kernels separately. That gives us, for each pixel, the values $`mag_x`$ and $`mag_y`$. The value of the current pixel is set at $`\sqrt(mag_x^2 + mag_y^2)`$.
 
 @[Sobel operator]({"stubs": ["edge/sobel.py"], "command": "sh -c 'cp lena.png input.png && python3 edge/sobel.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
