@@ -1,5 +1,4 @@
 from PIL import Image, ImageDraw
-from math import sqrt
 
 # Load image:
 inputImage = Image.open("input.png")
@@ -10,11 +9,11 @@ box_kernel = [[1 / 9, 1 / 9, 1 / 9],
               [1 / 9, 1 / 9, 1 / 9],
               [1 / 9, 1 / 9, 1 / 9]]
 
-gaussian_kernel = [[1 / 256,  4  / 256,  6 / 256,   4 / 256, 1 / 256]
-                   [4 / 256,  16 / 256, 24 / 256,  16 / 256, 4 / 256]
-                   [6 / 256,  24 / 256, 36 / 256,  24 / 256, 6 / 256]
-                   [4 / 256,  16 / 256, 24 / 256,  16 / 256, 4 / 256]
-                   [1 / 256,  4  / 256,  6 / 256,   4 / 256, 1 / 256]]
+gaussian_kernel = [[1 / 256, 4  / 256,  6 / 256,  4 / 256, 1 / 256],
+                   [4 / 256, 16 / 256, 24 / 256, 16 / 256, 4 / 256],
+                   [6 / 256, 24 / 256, 36 / 256, 24 / 256, 6 / 256],
+                   [4 / 256, 16 / 256, 24 / 256, 16 / 256, 4 / 256],
+                   [1 / 256, 4  / 256,  6 / 256,  4 / 256, 1 / 256]]
 
 kernel = box_kernel
 
@@ -25,7 +24,7 @@ draw = ImageDraw.Draw(outputImage)
 # Compute convolution between intensity and kernels
 for x in range(1, inputImage.width - 1):
     for y in range(1, inputImage.height - 1):
-        acc = [0, 0 , 0]
+        acc = [0, 0, 0]
         for a in range(len(kernel)):
             for b in range(len(kernel)):
                 xn = x + a - 1

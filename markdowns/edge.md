@@ -22,7 +22,7 @@ This is called the Box Blur. Each pixel is computed as the average of the surrou
 
 @[Box Blur]({"stubs": ["edge/blur.py"], "command": "sh -c 'cp lena256.png input.png && python3 edge/blur.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
 
-## Edge detection
+# Edge detection
 
 There are multiple ways to do edge detection. We will present the Sobel Operator here.
 
