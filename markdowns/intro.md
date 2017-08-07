@@ -6,7 +6,7 @@ The source codes are done in Python but if you know how to program in another la
 
 Table of Content:
 
-- [Crop, Flip, Rotate and Resize](tranform.md)
+- [Crop, Flip, Rotate and Resize](transform.md)
 - Colorize, Luminosity
 - Multiplication
 - [Kernel filtering (edge detection, blur, ...)](edge.md)

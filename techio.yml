@@ -4,6 +4,8 @@ title : Basic Image Manipulation
 plan:
   - title: Introduction
     statement: markdowns/intro.md
+  - title: Transformation 
+    statement: markdowns/transform.md
   - title: Filtering
     statement: markdowns/edge.md
 
