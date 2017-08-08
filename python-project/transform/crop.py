@@ -6,7 +6,7 @@ input_pixels = input_image.load()
 
 # Cropped area
 origin = (130, 150)
-end = (400, 350)
+end = (400, 320)
 
 # Create output image
 output_image = Image.new("RGB", (end[0] - origin[0], end[1] - origin[1]))
