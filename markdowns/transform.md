@@ -22,4 +22,20 @@ A flip (mirror effect) is done by reversing the pixels horizontally or verticall
 
 # Rotate
 
+The algorithm used for a rotation is similar to a flip: to compute the new image, we iterate over all the pixels and print the corresponding pixel from the source image.
+
+The point situated at the coordinates (x, y) in the new image is equal to the point (xp, yp) in the input image:
+```
+xp = x * cos(angle) - y * sin(angle)
+yp = x * sin(angle) + y * cos(angle)
+```
+If (xp, yp) is out of the input image, it is ignored (black pixel).
+
+This can be used to do a rotation, however, the center of the rotation will be at coordinate (0, 0). In order to change the coordinates of the center of the rotation, we need to shift the coordinates before the rotation and after the rotation:
+
+```
+xp = (x - center_x) * cos(angle) - (y - center_y) * sin(angle) + center_x
+yp = (x - center_x) * sin(angle) + (y - center_y) * cos(angle) + center_y
+```
+
 @[Rotate]({"stubs": ["transform/rotate.py"], "command": "sh -c 'cp lena.png input.png && python3 transform/rotate.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
