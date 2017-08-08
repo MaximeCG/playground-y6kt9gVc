@@ -16,6 +16,8 @@ To compute the rescaled image, we need the ratio for both horizontal and vertica
 
 # Flip
 
+A flip (mirror effect) is done by reversing the pixels horizontally or vertically. For instance, for an horizontal flip, the pixel situated at coordinate (x, y) will be situated at coordinate (width - x - 1, y) in the new image.
+
 @[Flip]({"stubs": ["transform/flip.py"], "command": "sh -c 'cp lena.png input.png && python3 transform/flip.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
 
 # Rotate
