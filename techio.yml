@@ -6,6 +6,8 @@ plan:
     statement: markdowns/intro.md
   - title: Transformation 
     statement: markdowns/transform.md
+  - title: Colors
+    statement: markdowns/color.md
   - title: Filtering
     statement: markdowns/edge.md
 
