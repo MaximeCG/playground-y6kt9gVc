@@ -6,6 +6,10 @@ Changing the luminosity of a picture in a RGB mode can be done by adding a const
 
 # Contrast
 
+The contrast is the difference in brightness (or color) that makes the objects in a picture distinguishable. The intensity histogram of an image is the distribution of pixel luminance for an image. In order to improve the contrast, we can use a linear normalization of the intensity histogram:
+
+$`I_N=(I-\text{Min})\frac{\text{newMax}-\text{newMin}}{\text{Max}-\text{Min}}+\text{newMin}`$
+
 @[Scale]({"stubs": ["color/contrast.py"], "command": "sh -c 'cp lena.png input.png && python3 color/contrast.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
 
 # Colorize
