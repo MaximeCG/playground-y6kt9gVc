@@ -8,5 +8,5 @@ Table of Content:
 
 - [Crop, Flip, Rotate and Resize](transform.md)
 - [Colorize, Luminosity](color.md)
-- Multiplication
+- [Multiplication](multiplication.md)
 - [Kernel filtering (edge detection, blur, ...)](edge.md)
