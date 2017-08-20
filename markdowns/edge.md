@@ -44,25 +44,21 @@ As you can see, it's a weighten mean of the surrounding pixels that gives more w
 
 There are multiple ways to do edge detection. We will present the Sobel Operator here.
 
-The Sobel Operator uses two kernels (one for each direction):
-
-```math
+The Sobel Operator uses two kernels (one for each direction) $`
 K_x =
 \begin{bmatrix}
 -1 & 0 & 1 \\
 -2 & 0 & 2 \\
 -1 & 0 & 1
 \end{bmatrix}
-```
-
-```math
+`$ and $`
 K_y =
 \begin{bmatrix}
 -1 & -2 & -1 \\
  0 &  0 &  0 \\
  1 &  2 &  1
 \end{bmatrix}
-```
+`$.
 
 We compute the convolution between the image (converted in black and white) and the two kernels separately. That gives us, for each pixel, the values $`mag_x`$ and $`mag_y`$. The value of the current pixel is set at $`\sqrt{mag_x^2 + mag_y^2}`$.
 
