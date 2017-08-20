@@ -46,7 +46,7 @@ There are multiple ways to do edge detection. We will present the Sobel Operator
 
 The Sobel Operator uses two kernels (one for each direction):
 
-```
+```math
 K_x =
 \begin{bmatrix}
 -1 & 0 & 1 \\
@@ -55,7 +55,7 @@ K_x =
 \end{bmatrix}
 ```
 
-```
+```math
 K_y =
 \begin{bmatrix}
 -1 & -2 & -1 \\
