@@ -1,8 +1,10 @@
-# Basic image manipulation
+# Basic Image Manipulation
 
-In this playground, you will practice simple image manipulations, without the help of libraries. This article is intended for people curious to know how to do some simple image manipulations, with an educational purpose. For the same reason, the code that is provided isn't optimized. I recommend using a software or a library if you have to do image manipulations.
+This article is intended for people curious to know how to do some simple image manipulations such as rotation, colorization, increase of contrast, blur, edge detection...
 
-The source codes are done in Python but if you know how to program in another language, you should be able to understand the codes.
+In this playground, you will practice simple image manipulations, without the help of advanced libraries. The code that is provided isn't optimized, this is just for educational purpose, I recommend using a software or a library if you have to do image manipulations.
+
+The source codes are done in Python but if you know how to program in another language, you should be able to understand the codes. The code can be executed directly in your browser.
 
 Table of Content:
 

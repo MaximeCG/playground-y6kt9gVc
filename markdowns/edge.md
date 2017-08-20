@@ -12,11 +12,15 @@ In this example, the value of the pixels is equal to the double of the pixel tha
 
 A simple blur can be done using this kernel: 
 
+```math
+\frac{1}{9}
+\begin{bmatrix}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{bmatrix}
 ```
-| 1/9, 1/9, 1/9 |
-| 1/9, 1/9, 1/9 |
-| 1/9, 1/9, 1/9 |
-```
+
 
 This is called the Box Blur. Each pixel is computed as the average of the surrounding pixels.
 
