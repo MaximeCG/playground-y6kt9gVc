@@ -26,12 +26,15 @@ This is called the Box Blur. Each pixel is computed as the average of the surrou
 
 And here is the kernel for the Gaussian Blur:
 
-```
-          | 1,  4,  6,  4, 1 |
-          | 4, 16, 24, 16, 4 |
-1 / 256 * | 6, 24, 36, 24, 6 |
-          | 4, 16, 24, 16, 4 |
-          | 1,  4,  6,  4, 1 |
+```math
+\frac{1}{256}
+\begin{bmatrix}
+1 &  4 &  6 &  4 & 1 \\
+4 & 16 & 24 & 16 & 4 \\
+6 & 24 & 36 & 24 & 6 \\
+4 & 16 & 24 & 16 & 4 \\
+1 &  4 &  6 &  4 & 1 
+\end{bmatrix}
 ```
 As you can see, it's a weighten mean of the surrounding pixels that gives more weight to the pixel near the current pixel.
 
