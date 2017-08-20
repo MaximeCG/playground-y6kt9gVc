@@ -12,7 +12,7 @@ Table of Content:
 - [Luminosity, Contrast and Colorize](color.md)
 - [Kernel filtering (edge detection, blur, ...)](edge.md)
 
-![Preview](preview.png)
+![Preview](preview.jpg)
 ```math
 \text{A preview of the image manipulations tackled in this playground}
 ```
