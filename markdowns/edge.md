@@ -6,7 +6,7 @@ Let's take a 3x3 matrix as our kernel. For each pixel, the filter multiplies the
 
 ![Matrix convolution](convolution.png)
 
-In this example, the value of the pixels is equal to the double of the pixel that was located above it (e.g. 92 = 46 x 2).
+In this example, the value of each pixel is equal to the double of the pixel that was located above it (e.g. 92 = 46 x 2).
 
 # Blur
 
@@ -44,7 +44,7 @@ As you can see, it's a weighten mean of the surrounding pixels that gives more w
 
 There are multiple ways to do edge detection. We will present the Sobel Operator here.
 
-The Sobel Operator uses two kernels (one for each direction) $`
+The Sobel Operator uses two kernels (one for each direction): $`
 K_x =
 \begin{bmatrix}
 -1 & 0 & 1 \\
