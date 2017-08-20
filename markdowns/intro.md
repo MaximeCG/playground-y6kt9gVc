@@ -11,3 +11,8 @@ Table of Content:
 - [Crop, Flip, Rotate and Resize](transform.md)
 - [Luminosity, Contrast and Colorize](color.md)
 - [Kernel filtering (edge detection, blur, ...)](edge.md)
+
+![Preview](preview.png)
+```math
+\text{A preview of the image manipulations tackled in this playground}
+```
