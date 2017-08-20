@@ -47,15 +47,21 @@ There are multiple ways to do edge detection. We will present the Sobel Operator
 The Sobel Operator uses two kernels (one for each direction):
 
 ```
-     | -1,  0,  1 |
-Kx = | -2,  0,  2 |
-     | -1,  0,  1 |
+K_x =
+\begin{bmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
+-1 & 0 & 1
+\end{bmatrix}
 ```
 
 ```
-     | -1, -2, -1 |
-Ky = |  0,  0,  0 |
-     |  1,  2,  1 |
+K_y =
+\begin{bmatrix}
+-1 & -2 & -1 \\
+ 0 &  0 &  0 \\
+ 1 &  2 &  1
+\end{bmatrix}
 ```
 
 We compute the convolution between the image (converted in black and white) and the two kernels separately. That gives us, for each pixel, the values $`mag_x`$ and $`mag_y`$. The value of the current pixel is set at $`\sqrt{mag_x^2 + mag_y^2}`$.
