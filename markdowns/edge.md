@@ -36,7 +36,7 @@ And here is the kernel for the Gaussian Blur:
 1 &  4 &  6 &  4 & 1 
 \end{bmatrix}
 ```
-As you can see, it's a weighten mean of the surrounding pixels that gives more weight to the pixel near the current pixel.
+As you can see, it's a weighted mean of the surrounding pixels that gives more weight to the pixel near the current pixel.
 
 @[Blur]({"stubs": ["edge/blur.py"], "command": "sh -c 'cp lena256.png input.png && python3 edge/blur.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
 
