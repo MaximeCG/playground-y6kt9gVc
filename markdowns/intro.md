@@ -12,6 +12,8 @@ Table of Content:
 - [Luminosity, Contrast and Colorize](color.md)
 - [Kernel filtering (edge detection, blur, ...)](edge.md)
 
+Because of a lack of imagination, I decided to use the famous picture of [Lenna](https://en.wikipedia.org/wiki/Lenna), a standard test image widely used in the field of image processing. Feel free to recommend me other pictures that I can use to illustrate the various transformations and filters.
+
 ![Preview](preview.jpg)
 ```math
 \text{A preview of the image manipulations tackled in this playground}
