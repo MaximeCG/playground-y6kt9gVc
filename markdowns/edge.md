@@ -21,7 +21,6 @@ A simple blur can be done using this kernel:
 \end{bmatrix}
 ```
 
-
 This is called the Box Blur. Each pixel is computed as the average of the surrounding pixels.
 
 And here is the kernel for the Gaussian Blur:
@@ -36,9 +35,31 @@ And here is the kernel for the Gaussian Blur:
 1 &  4 &  6 &  4 & 1 
 \end{bmatrix}
 ```
-As you can see, it's a weighted mean of the surrounding pixels that gives more weight to the pixel near the current pixel.
+As you can see, it's a weighted mean of the surrounding pixels that gives more weight to the pixel near the current pixel. This kind of filter is also called a low-pass filter.
 
 @[Blur]({"stubs": ["edge/blur.py"], "command": "sh -c 'cp lena256.png input.png && python3 edge/blur.py && echo \"TECHIO> open -s /project/target/ index.html\"'"})
+
+# Sharpening
+
+The details of an image can be emphasized by using a high-pass filter:
+
+```math
+\begin{bmatrix}
+0 & -0.5 & 0 \\
+-0.5 & 3 & -0.5 \\
+0 & -0.5 & 0
+\end{bmatrix}
+```
+
+In this kernel, the pixel is boosted when the neighbor pixels are different.
+
+@[Blur]({"stubs": ["edge/high-pass.py"], "command": "sh -c 'cp face.png input.png && python3 edge/high-pass.py && echo \"TECHIO> open -s /project/target/ index_512.html\"'"})
+
+This filter can also be improved by applying the transformation only when the pixel is dark enough.
+
+Another approach, called unsharp mask, consist in substracting from the original image a mask created using a low-pass filter. Basically, sharpening is realized by removed the blurry part of the image: $`sharpened = original + (original − blurred) × amount.`$
+
+@[Blur]({"stubs": ["edge/unsharp-mask.py"], "command": "sh -c 'cp face.png input.png && python3 edge/unsharp-mask.py && echo \"TECHIO> open -s /project/target/ index_512.html\"'"})
 
 # Edge detection
 
