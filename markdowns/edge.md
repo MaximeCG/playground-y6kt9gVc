@@ -53,13 +53,13 @@ The details of an image can be emphasized by using a high-pass filter:
 
 In this kernel, the pixel is boosted when the neighbor pixels are different.
 
-@[Blur]({"stubs": ["edge/high-pass.py"], "command": "sh -c 'cp face.png input.png && python3 edge/high-pass.py && echo \"TECHIO> open -s /project/target/ index_512.html\"'"})
+@[Sharpening]({"stubs": ["edge/high-pass.py"], "command": "sh -c 'cp face.png input.png && python3 edge/high-pass.py && echo \"TECHIO> open -s /project/target/ index_512.html\"'"})
 
 This filter can also be improved by applying the transformation only when the pixel is dark enough.
 
 Another approach, called unsharp mask, consist in substracting from the original image a mask created using a low-pass filter. Basically, sharpening is realized by removed the blurry part of the image: $`sharpened = original + (original − blurred) × amount.`$
 
-@[Blur]({"stubs": ["edge/unsharp-mask.py"], "command": "sh -c 'cp face.png input.png && python3 edge/unsharp-mask.py && echo \"TECHIO> open -s /project/target/ index_512.html\"'"})
+@[Unsharp Mask]({"stubs": ["edge/unsharp-mask.py"], "command": "sh -c 'cp face.png input.png && python3 edge/unsharp-mask.py && echo \"TECHIO> open -s /project/target/ index_512.html\"'"})
 
 # Edge detection
 
